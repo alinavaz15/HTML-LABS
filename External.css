@@ -1,0 +1,25 @@
+*{
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        font-style: oblique;
+    }
+    h1{
+        color: aqua;
+
+    }
+    h2{
+        color: bisque;
+    }
+    h3{
+        color: brown;
+    }
+    h4{
+        color: crimson;
+    }
+    h5{
+        color: darkcyan;
+    }
+    h6{
+        color: teal;
+    }
+}
