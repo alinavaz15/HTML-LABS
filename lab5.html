@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlinks and Images</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+        h2 {
+            color: green;
+        }
+        p {
+            color: red;
+        }
+        img {
+            border: 1px solid black;
+            height: 50%;
+            width: 70%;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            color: green;
+            transition: 0.5s;
+            filter: contrast(1.5);
+        }
+        @media only screen and (max-width: 600px) {
+            h1 {
+                color: red;
+            }
+            h2 {
+                color: green;
+            }
+            p {
+                color: blue;
+            }
+            img {
+                border: 5px solid red;
+                height: fit-content;
+                width: 100%;
+            }
+            a {
+                color: purple;
+            }
+            a:hover {
+                color: yellow;
+                filter: contrast(1.5);
+            }   
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    
+    <h2>Hyperlinks</h2>
+    <p>
+        <a href="https://www.example.com" title="External Link to Example">Visit Example.com</a>
+    </p>
+    <p>
+        <a href="Lab4.html" title="Internal Link to Section">Go to Internal Section</a>
+    </p>
+    <p>
+        <a href="mailto:alinavaz.r.gilani@tsuniv.edu.in" title="Send an Email">Send me an Email</a>
+    </p>
+    
+    <h2>Images</h2>
+    <p>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg">
+    </p>
+    
+    <h2 id="internal-section">Internal Section</h2>
+    <p>This is an internal section of the webpage.</p>
+</body>
+</html>
