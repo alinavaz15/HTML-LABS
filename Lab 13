@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        .result {
+            font-size: 16px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>if else statement using JavaScript</h1>
+    <div class="result" id="ifElseResult"></div>
+
+    <h1>if else if and else statement using JavaScript</h1>
+    <div class="result" id="ifElseIfResult"></div>
+
+    <h1>switch statement using JavaScript</h1>
+    <div class="result" id="switchResult"></div>
+
+    <script>
+        // If...else example
+        let a = 10;
+        let b = 20;
+        let result1 = "";
+
+        if (a > b) {
+            result1 = "a is greater than b";
+        } else if (a < b) {
+            result1 = "a is less than b";
+        } else {
+            result1 = "a is equal to b";
+        }
+        document.getElementById("ifElseResult").textContent = result1;
+
+        // If...else if...else example
+        let x = 15;
+        let result2 = "";
+
+        if (x > 20) {
+            result2 = "x is greater than 20";
+        } else if (x > 10) {
+            result2 = "x is greater than 10 but less than or equal to 20";
+        } else {
+            result2 = "x is less than or equal to 10";
+        }
+        document.getElementById("ifElseIfResult").textContent = result2;
+
+        // Switch statement example
+        let day = 3;
+        let dayName = "";
+
+        switch (day) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default:
+                dayName = "Invalid day";
+        }
+        document.getElementById("switchResult").textContent = dayName;
+    </script>
+
+</body>
+</html>
