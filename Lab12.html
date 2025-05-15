@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operations with JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #222;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #2a5298;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: capitalize;
+        }
+
+        h2 {
+            color: #1e3c72;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+        .result {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mathematical Operations Using JavaScript</h1>
+
+    <h2>Addition</h2>
+    <div class="result" id="addResult"></div>
+
+    <h2>Subtraction</h2>
+    <div class="result" id="subResult"></div>
+
+    <h2>Multiplication</h2>
+    <div class="result" id="mulResult"></div>
+
+    <h2>Division</h2>
+    <div class="result" id="divResult"></div>
+
+    <script>
+        // Addition
+        let a = 5;
+        let b = 10;
+        let sum = a + b;
+        document.getElementById("addResult").textContent = `The sum of ${a} and ${b} is: ${sum}`;
+
+        // Subtraction
+        let c = 15;
+        let d = 5;
+        let difference = c - d;
+        document.getElementById("subResult").textContent = `The difference of ${c} and ${d} is: ${difference}`;
+
+        // Multiplication
+        let e = 4;
+        let f = 6;
+        let product = e * f;
+        document.getElementById("mulResult").textContent = `The product of ${e} and ${f} is: ${product}`;
+
+        // Division
+        let g = 20;
+        let h = 4;
+        let quotient = g / h;
+        document.getElementById("divResult").textContent = `The quotient of ${g} and ${h} is: ${quotient}`;
+    </script>
+</body>
+</html>
