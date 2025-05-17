@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sum of Two Numbers</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e8f5e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #a5d6a7;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 350px;
+    }
+    h2 {
+      color: #1b5e20;
+      margin-bottom: 20px;
+    }
+    input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 16px;
+      border: 2px solid #66bb6a;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: black;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Sum Calculator</h2>
+  <input type="number" id="num1" placeholder="Enter first number" />
+  <br />
+  <input type="number" id="num2" placeholder="Enter second number" />
+  <br />
+  <button onclick="calculateSum()">Calculate Sum</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  function calculateSum() {
+    const n1 = parseFloat(document.getElementById('num1').value);
+    const n2 = parseFloat(document.getElementById('num2').value);
+    const resultDiv = document.getElementById('result');
+
+    if (isNaN(n1) || isNaN(n2)) {
+      resultDiv.textContent = "Please enter valid numbers.";
+      return;
+    }
+
+    const sum = n1 + n2;
+    resultDiv.textContent = "Sum: " + sum;
+  }
+</script>
+
+</body>
+</html>
