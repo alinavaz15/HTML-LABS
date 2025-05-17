@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Largest Number</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #bbdefb;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      border: 2px solid #64b5f6;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Find the Largest Number</h2>
+  <input type="text" id="numberInput" placeholder="Enter numbers separated by commas">
+  <br>
+  <button onclick="findLargest()">Find Largest</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  function findLargest() {
+    const input = document.getElementById('numberInput').value;
+    const result = document.getElementById('result');
+
+    // Convert input string into array of numbers
+    const numArray = input.split(',').map(item => parseFloat(item.trim())).filter(n => !isNaN(n));
+
+    if (numArray.length === 0) {
+      result.textContent = "Please enter valid numbers.";
+      return;
+    }
+
+    // Find the largest number
+    let largest = numArray[0];
+    for (let i = 1; i < numArray.length; i++) {
+      if (numArray[i] > largest) {
+        largest = numArray[i];
+      }
+    }
+
+    result.textContent = "The largest number is: " + largest;
+  }
+</script>
+
+</body>
+</html>
