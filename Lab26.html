@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vowel Counter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #bbdefb;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 350px;
+    }
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #64b5f6;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Vowel Counter</h2>
+    <input type="text" id="inputString" placeholder="Enter your text here" />
+    <br />
+    <button onclick="countVowels()">Count Vowels</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function countVowels() {
+      const str = document.getElementById('inputString').value;
+      const vowels = 'aeiouAEIOU';
+      let count = 0;
+
+      for (let char of str) {
+        if (vowels.includes(char)) {
+          count++;
+        }
+      }
+
+      const resultDiv = document.getElementById('result');
+      resultDiv.textContent = `Number of vowels: ${count}`;
+    }
+  </script>
+
+</body>
+</html>
