@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sum Up to N</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #bbdefb;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+    h2 {
+      color: #0d47a1;
+    }
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 220px;
+      border: 2px solid #64b5f6;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Sum from 1 to N</h2>
+  <input type="number" id="numInput" placeholder="Enter a number">
+  <br>
+  <button onclick="calculateSum()">Calculate Sum</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  function calculateSum() {
+    const n = parseInt(document.getElementById('numInput').value);
+    const result = document.getElementById('result');
+
+    if (isNaN(n) || n < 1) {
+      result.textContent = "Please enter a valid positive number.";
+      return;
+    }
+
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+      sum += i;
+    }
+
+    result.textContent = "Sum from 1 to " + n + " is: " + sum;
+  }
+</script>
+
+</body>
+</html>
