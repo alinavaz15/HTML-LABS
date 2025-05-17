@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Confirm, and Prompt Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        button {
+            background: #4f8cff;
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(79, 140, 255, 0.1);
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>Alert box example</h1>
+        <button onclick="showAlert()">Click me</button>
+    </section>
+
+    <section>
+        <h1>Confirm box example</h1>
+        <button onclick="showConfirm()">Click me</button>
+    </section>
+
+    <section>
+        <h1>Prompt box example</h1>
+        <button onclick="showPrompt()">Click me</button>
+    </section>
+
+    <script>
+        function showAlert() {
+            alert("Hello! This is an alert box.");
+        }
+
+        function showConfirm() {
+            let result = confirm("Are you sure you want to proceed?");
+            if (result) {
+                alert("You clicked OK!");
+            } else {
+                alert("You clicked Cancel!");
+            }
+        }
+
+        function showPrompt() {
+            let name = prompt("Please enter your name:");
+            if (name) {
+                alert("Hello, " + name + "!");
+            } else {
+                alert("You didn't enter a name.");
+            }
+        }
+    </script>
+
+</body>
+</html>
