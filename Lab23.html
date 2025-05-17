@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Object</title>
+  <style>
+    body {
+      background-color: #e3f2fd;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background-color: #bbdefb;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      text-align: left;
+      color: #0d47a1;
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .property {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Student Info</h2>
+  <div class="property" id="name"></div>
+  <div class="property" id="age"></div>
+  <div class="property" id="course"></div>
+</div>
+
+<script>
+  // Create the student object
+  const student = {
+    name: "Alinavaz",
+    age: 19,
+    course: "Computer Science"
+  };
+
+  // Print each property using dot notation
+  document.getElementById("name").textContent = "Name: " + student.name;
+  document.getElementById("age").textContent = "Age: " + student.age;
+  document.getElementById("course").textContent = "Course: " + student.course;
+</script>
+
+</body>
+</html>
