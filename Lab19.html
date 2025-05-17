@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      background-color: #e3f2fd;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculator {
+      background: #bbdefb;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    h2 {
+      color: #0d47a1;
+    }
+    input, select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 2px solid #64b5f6;
+      margin: 10px;
+      width: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <h2>Simple Calculator</h2>
+  <input type="number" id="num1" placeholder="Number 1">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">−</option>
+    <option value="*">×</option>
+    <option value="/">÷</option>
+  </select>
+  <input type="number" id="num2" placeholder="Number 2">
+  <br>
+  <button onclick="calculate()">Calculate</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  function calculate() {
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    const operator = document.getElementById("operator").value;
+    const resultDiv = document.getElementById("result");
+    
+    let result;
+
+    if (isNaN(num1) || isNaN(num2)) {
+      resultDiv.textContent = "Please enter valid numbers.";
+      return;
+    }
+
+    switch (operator) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      case '*':
+        result = num1 * num2;
+        break;
+      case '/':
+        if (num2 === 0) {
+          resultDiv.textContent = "Error: Division by zero!";
+          return;
+        }
+        result = num1 / num2;
+        break;
+      default:
+        resultDiv.textContent = "Invalid operator.";
+        return;
+    }
+
+    resultDiv.textContent = `Result: ${num1} ${operator} ${num2} = ${result}`;
+  }
+</script>
+
+</body>
+</html>
