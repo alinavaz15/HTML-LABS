@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Object</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #bbdefb;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      width: 350px;
+      text-align: center;
+      color: #0d47a1;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Details</h2>
+    <button onclick="showStudent()">Show Student Info</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    const student = {
+      name: "Alinavz",
+      age: 19,
+      class: "Computer Science"
+    };
+
+    function showStudent() {
+      const output = document.getElementById('output');
+      output.innerHTML = `
+        <p><strong>Name:</strong> ${student.name}</p>
+        <p><strong>Age:</strong> ${student.age}</p>
+        <p><strong>Class:</strong> ${student.class}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
