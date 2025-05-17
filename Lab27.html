@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Check Number Sign</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #bbdefb;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 350px;
+    }
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+    input[type="number"] {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #64b5f6;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Check Number Sign</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <br />
+    <button onclick="checkNumberSign()">Check</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkNumberSign() {
+      const num = parseFloat(document.getElementById('numberInput').value);
+      const resultDiv = document.getElementById('result');
+
+      if (isNaN(num)) {
+        resultDiv.textContent = "Please enter a valid number.";
+        return;
+      }
+
+      if (num > 0) {
+        resultDiv.textContent = "Positive number";
+      } else if (num < 0) {
+        resultDiv.textContent = "Negative number";
+      } else {
+        resultDiv.textContent = "Zero";
+      }
+    }
+  </script>
+
+</body>
+</html>
